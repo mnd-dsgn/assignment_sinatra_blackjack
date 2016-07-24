@@ -1,9 +1,11 @@
 <h1>Dealer Hand</h1>
-<%= session['dealer_hand'][0] %>
-<span>  [X, X]</span>
+<%= session['dealer_hand'][0].join(' of ') %><br>
+<span> ? of ??</span>
 
 <h1>Player Hand</h1>
-<%= session['player_hand'] %>
+<% session['player_hand'].each_with_index do |card, idx| %>
+  <%= card.join(' of ') + '<br>' %>
+<% end %>
 
 
 <h2>Hit or stay?</h2>

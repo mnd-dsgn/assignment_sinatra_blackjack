@@ -7,9 +7,8 @@ class Deck
     @cards = cards
   end
 
-
   def new_deck
-    suits = ["S", "C", "D", "H"]
+    suits = ["Spades", "Clubs", "Diamonds", "Hearts"]
     values = (2..14).to_a
     values *= 4
     deck = []

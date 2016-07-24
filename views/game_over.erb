@@ -1,7 +1,14 @@
 <h1><%= session['message'] %></h1>
 
-<h2>Player hand: <%= session['player_hand'] %></h2>
-<h2>Dealer hand: <%= session['dealer_hand'] %></h2>
+<h1>Dealer Hand</h1>
+<% session['dealer_hand'].each do |card| %>
+  <%= card.join(' of ') + '<br>' %>
+<% end %>
+
+<h1>Player Hand</h1>
+<% session['player_hand'].each do |card| %>
+  <%= card.join(' of ') + '<br>' %>
+<% end %>
 
 <h2>Play again?</h2>
 <a href="/bet"><input type="button" name="whatevs" value="Yes."></a>
