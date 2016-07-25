@@ -1,15 +1,23 @@
 <h1>Dealer Hand</h1>
-<%= session['dealer_hand'][0].join(' of ') %><br>
+<h3>
+<ul>
+  <li> <%= session['dealer_hand'][0].join(' of ') %><br> </li>
 <span> ? of ??</span>
+</ul>
+</h3>
 
 <h1>Player Hand</h1>
+<h3>
+<ul>
 <% session['player_hand'].each_with_index do |card, idx| %>
-  <%= card.join(' of ') + '<br>' %>
+  <li> <%= card.join(' of ') + '<br>' %> </li>
 <% end %>
+</ul>
+</h3>
 
 
 <h2>Hit or stay?</h2>
-<form action="/turn" method="post">
+<form action="/turn" method="post" id="hit-or-stay-buttons">
   <input type="submit" name="hit" value="Hit">
   <input type="submit" name="stay" value="Stay">
 </form>

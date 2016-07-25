@@ -1,7 +1,7 @@
 <h1>Place your bet.</h1>
-<h2>Your current balance is <%= session['bankroll'] %> </h2>
-<form action="bet" method="post">
+<h3>Your current balance is <%= session['bankroll'] %> </h3>
+<form action="bet" method="post" id="bet-form">
   <label>Bet:</label>
   <input type="text" name="bet_value">
 </form>
-<h3><%= session['bet_message'] %></h3>
+<h2 id="bet-message"><%= session['bet_message'] %></h2>
